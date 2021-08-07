@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ionic</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+
+<body>
+    <ion-app>
+        <!-- header -->
+        <ion-header>
+            <ion-toolbar color="primary">
+                <ion-title>
+                    Aplikasiku
+                </ion-title>
+            </ion-toolbar>
+        </ion-header>
+        <!-- header -->
+
+        <!-- content -->
+        <ion-content>
+            <ion-grid>
+
+                <!-- Add course -->
+                <ion-row>
+                    <ion-col size-md="6" offset-md="3">
+                        <ion-card>
+                            <ion-card-content>
+                                <ion-item>
+                                    <ion-label>Belanjaan </ion-label>
+                                    <ion-input type="text" id="course_name"></ion-input>
+                                </ion-item>
+                                <ion-item>
+                                    <ion-label>Harga </ion-label>
+                                    <ion-input type="text" id="course_price"></ion-input>
+                                </ion-item>
+                                <div class="ion-text-end ion-margin-top">
+                                    <ion-button color="danger" fill="outline" id="btn_clear">
+                                        <ion-icon name="close-outline"></ion-icon>
+                                        clear
+                                    </ion-button>
+                                    <ion-button color="success" id="btn_add">
+                                        <ion-icon name="add-outline"></ion-icon>
+                                        Tambah daftar
+                                    </ion-button>
+                                </div>
+                            </ion-card-content>
+                        </ion-card>
+                    </ion-col>
+                </ion-row> <!-- end add course -->
+
+                <!-- list course -->
+                <ion-row>
+                    <i-col size-md="6" offset-md="3">
+                        <ion-list class="ion-margin-end" id="course_list"> </ion-list>
+                    </i-col>
+                </ion-row>
+
+                <!-- overal expense -->
+                <ion-row>
+                    <ion-col size-md="6" offset-md="3">
+                        <p class="ion-margin-start">Total harga: <span id="overal_expense"></span></p>
+                    </ion-col>
+                </ion-row>
+
+            </ion-grid>
+        </ion-content>
+    </ion-app>
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
